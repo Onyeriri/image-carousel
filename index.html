@@ -1,10 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carousel Feature</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@200&family=Noto+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script
+      src="https://kit.fontawesome.com/fa9ce4128a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Carousel</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Your favourite pictures on display.</h1>
+    </header>
+
+    <!-- main container -->
+    <div class="galleryContainer">
+      <div class="slideShowContainer">
+        <div id="playPause" onclick="playPauseSlides()"></div>
+        <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow">
+          <span class="arrow arrowLeft"></span>
+        </div>
+        <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow">
+          <span class="arrow arrowRight"></span>
+        </div>
+        <div class="captionTextHolder">
+          <p class="captionText slideTextFromTop"></p>
+        </div>
+        <div class="imageHolder">
+          <img src="images/img_1.jpg" />1366X768
+          <p class="captionText">Caption Text-01</p>
+        </div>
+        <div class="imageHolder">
+          <img src="images/img_2.jpg" />
+          <p class="captionText">Caption Text-02</p>
+        </div>
+        <div class="imageHolder">
+          <img src="images/img_3.jpg" />
+          <p class="captionText">Caption Text-03</p>
+        </div>
+        <div class="imageHolder">
+          <img src="images/img_4.jpg" />
+          <p class="captionText">Caption Text-04</p>
+        </div>
+      </div>
+      <div id="dotsContainer"></div>
+    </div>
+
+    <!-- footer section -->
+    <footer class="fa-3x footer">
+      <ul>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="script/script.js"></script>
+  </body>
 </html>
