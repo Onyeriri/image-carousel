@@ -37,4 +37,4 @@ Finally, during the development process various mistake, error and bugs was enco
 
 It's expected to encounter challenges during a development process in a developer's life. But, with help of debugging process these challenges was tackled or eliminated. With the help of tools like google chrome and microsoft visual code editor (vscode) was pretty helpful during this process.
 
-Finally, the duck method was introduced at some point to better understand exactly what each part of the code was actually doing or supposed to be doing.
+Finally, the **Duck** method was introduced at some point to better understand exactly what each part of the code was actually doing or supposed to be doing.
