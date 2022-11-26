@@ -343,7 +343,6 @@ h1 {
 .footer ul {
   display: flex;
   width: 70%;
-  /* background: wheat; */
   list-style: none;
   padding: 0;
   margin: 0;
