@@ -1,5 +1,8 @@
-var slideIndex, slides, dots, captionText;
-function initGallery() {
+// initialize variables
+let slideIndex, slides, dots, captionText;
+
+// function that
+const initGallery = () => {
   slideIndex = 0;
   slides = document.getElementsByClassName("imageHolder");
   slides[slideIndex].style.opacity = 1;
@@ -10,42 +13,42 @@ function initGallery() {
 
   //disable nextPrevBtn if slide count is one
   if (slides.length < 2) {
-    var nextPrevBtns = document.querySelector(".leftArrow,.rightArrow");
+    let nextPrevBtns = document.querySelector(".leftArrow .rightArrow");
     nextPrevBtns.style.display = "none";
-    for (i = 0; i < nextPrevBtn.length; i++) {
+    console.log("...1");
+    for (let i = 0; i < nextPrevBtn.length; i++) {
       nextPrevBtn[i].style.display = "none";
+      console.log("...2");
     }
   }
 
   //add dots
   dots = [];
-  var dotsContainer = document.getElementById("dotsContainer"),
-    i;
-  for (i = 0; i < slides.length; i++) {
-    var dot = document.createElement("span");
+  let dotsContainer = document.getElementById("dotsContainer");
+  for (let i = 0; i < slides.length; i++) {
+    let dot = document.createElement("span");
     dot.classList.add("dots");
     dotsContainer.append(dot);
     dot.setAttribute("onclick", "moveSlide(" + i + ")");
     dots.push(dot);
   }
   dots[slideIndex].classList.add("active");
-}
+};
 
 initGallery();
 
-function plusSlides(n) {
+const plusSlides = (n) => {
   moveSlide(slideIndex + n);
-}
+};
 
-function moveSlide(n) {
-  var i;
-  var current, next;
-  var moveSlideAnimClass = {
+const moveSlide = (n) => {
+  let current, next;
+  let moveSlideAnimClass = {
     forCurrent: "",
     forNext: "",
   };
 
-  var slideTextAnimClass;
+  let slideTextAnimClass;
 
   if (n > slideIndex) {
     if (n >= slides.length) {
@@ -66,11 +69,10 @@ function moveSlide(n) {
   if (n != slideIndex) {
     next = slides[n];
     current = slides[slideIndex];
-    for (i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
       slides[i].className = "imageHolder";
       slides[i].style.opacity = 0;
       dots[i].classList.remove("active");
-      console.log(slides[i]);
     }
     current.classList.add(moveSlideAnimClass.forCurrent);
     next.classList.add(moveSlideAnimClass.forNext);
@@ -82,20 +84,20 @@ function moveSlide(n) {
     captionText.innerText = slides[n].querySelector(".captionText").innerText;
     captionText.style.display = "block";
   }
-}
+};
 
-var timer = null;
+let timer = null;
 
-function setTimer() {
-  timer = setInterval(function () {
+const setTimer = () => {
+  timer = setInterval(() => {
     plusSlides(1);
   }, 3000);
-}
+};
 
 setTimer();
 
-function playPauseSlides() {
-  var playPauseBtn = document.getElementById("playPause");
+const playPauseSlides = () => {
+  let playPauseBtn = document.getElementById("playPause");
   if (timer == null) {
     setTimer();
     playPauseBtn.style.backgroundPositionY = "0px";
@@ -104,4 +106,4 @@ function playPauseSlides() {
     timer = null;
     playPauseBtn.style.backgroundPositionY = "-33px";
   }
-}
+};
