@@ -15,10 +15,8 @@ const initGallery = () => {
   if (slides.length < 2) {
     let nextPrevBtns = document.querySelector(".leftArrow .rightArrow");
     nextPrevBtns.style.display = "none";
-    console.log("...1");
     for (let i = 0; i < nextPrevBtn.length; i++) {
       nextPrevBtn[i].style.display = "none";
-      console.log("...2");
     }
   }
 
