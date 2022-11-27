@@ -1,7 +1,7 @@
 // initialize variables
 let slideIndex, slides, dots, captionText;
 
-// function that
+// function that initiate slide show
 const initGallery = () => {
   slideIndex = 0;
   slides = document.getElementsByClassName("imageHolder");
@@ -10,15 +10,6 @@ const initGallery = () => {
   captionText = document.querySelector(".captionTextHolder .captionText");
   captionText.innerText =
     slides[slideIndex].querySelector(".captionText").innerText;
-
-  //disable nextPrevBtn if slide count is one
-  if (slides.length < 2) {
-    let nextPrevBtns = document.querySelector(".leftArrow .rightArrow");
-    nextPrevBtns.style.display = "none";
-    for (let i = 0; i < nextPrevBtn.length; i++) {
-      nextPrevBtn[i].style.display = "none";
-    }
-  }
 
   //add dots
   dots = [];

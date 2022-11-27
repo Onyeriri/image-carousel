@@ -82,7 +82,7 @@ header {
   background: #000;
   color: #fff;
   padding: 0.3em 0;
-  margin-bottom: 4em;
+  margin-bottom: 50%;
 }
 
 h1 {
@@ -95,10 +95,10 @@ h1 {
 }
 
 .galleryContainer {
-  width: 100%;
+  width: 90%;
   height: 500px;
   max-width: 1000px;
-  margin: auto;
+  margin: 0 auto;
   user-select: none;
   box-shadow: 0px 0px 3px 1px #00000078;
   padding: 10px;
@@ -378,6 +378,10 @@ h1 {
     font-size: 1.7em;
     padding: 1em 0;
     letter-spacing: 0.3em;
+  }
+
+  header {
+    margin-bottom: 3em;
   }
 
   .footer {
